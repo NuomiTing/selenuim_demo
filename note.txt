@@ -7,7 +7,6 @@ from selenium import webdriver
 driver = webdriver.Chrome()# 创建一个 Chrome WebDriver 实例
 
 
-
 2. Selenium技术
 1) 调用的浏览器是零缓存的浏览器，默认带有自动化软件控制的告警标签
 2）所有的浏览器的交互与代码的执行都是基于webdriver来实现的
