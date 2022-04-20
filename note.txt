@@ -1,0 +1,18 @@
+1. selenium安装
+1）pip install selenium
+2) 下载webdriver，需同谷歌浏览器版本一致，地址http://npm.taobao.org/mirrors/chromedriver/
+3）将下载的文件拖入到 /usr/local/bin/ 目录下，可参考 https://www.jianshu.com/p/9e49d4d6513a
+4）新建工程，执行下面代码看是否能调起谷歌浏览器，能则成功
+from selenium import webdriver
+driver = webdriver.Chrome()# 创建一个 Chrome WebDriver 实例
+
+
+
+2. Selenium技术
+1) 调用的浏览器是零缓存的浏览器，默认带有自动化软件控制的告警标签
+2）所有的浏览器的交互与代码的执行都是基于webdriver来实现的
+3）自动化测试技术一定要用框架的形态来实现，而非线性代码的形态
+4）企业级所谓框架一般而言都是基于关键字驱动或者POM形态作为核心来实现的
+
+
+
