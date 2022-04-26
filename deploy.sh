@@ -12,30 +12,31 @@
 
 
 
-killTomcat()
-{
-  pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
-  echo "tomcat Id list:$pid"
-  if [ "$pid" = "" ]
-  then
-    echo "no tomcat pid alive"
-  else
-    kill -9 $pid
-  fi
-}
+#killTomcat()
+#{
+#  pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
+#  echo "tomcat Id list:$pid"
+#  if [ "$pid" = "" ]
+#  then
+#    echo "no tomcat pid alive"
+#  else
+#    kill -9 $pid
+#  fi
+#}
 cd $PROJ_PATH/SelenuimTest
-mvn clean install
 
-# 停tomcat
-killTomcat
+python3 test.py
 
-# 删除原有工程
-rm -rf $TOMCAT_APP_PATH//webapps/ROOT
-rm -rf $TOMCAT_APP_PATH//webapps/ROOT.war
-rm -rf $TOMCAT_APP_PATH//webapps/selenuim_demo.war
-
-# 复制新的工程
-cp $PROJ_PATH/SelenuimTest/ $TOMCAT_APP_PATH/webapps/
+## 停tomcat
+#killTomcat
+#
+## 删除原有工程
+#rm -rf $TOMCAT_APP_PATH//webapps/ROOT
+#rm -rf $TOMCAT_APP_PATH//webapps/ROOT.war
+#rm -rf $TOMCAT_APP_PATH//webapps/selenuim_demo.war
+#
+## 复制新的工程
+#cp $PROJ_PATH/SelenuimTest/ $TOMCAT_APP_PATH/webapps/
 
 #cd $TOMCAT_APP_PATH/webapps/
 #mv selenuim_demo.war ROOT.war
