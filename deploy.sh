@@ -9,6 +9,9 @@
 # export TOMCAT_APP_PATH=tomcat在部署机器上的路径
 
 ### base函数
+
+
+
 killTomcat()
 {
   pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
@@ -20,7 +23,7 @@ killTomcat()
     kill -9 $pid
   fi
 }
-cd $PROJ_PATH/selenuim_demo
+cd $PROJ_PATH/SelenuimTest
 mvn clean install
 
 # 停tomcat
@@ -32,11 +35,11 @@ rm -rf $TOMCAT_APP_PATH//webapps/ROOT.war
 rm -rf $TOMCAT_APP_PATH//webapps/selenuim_demo.war
 
 # 复制新的工程
-cp $PROJ_PATH/selenuim_demo/target/selenuim_demo.war $TOMCAT_APP_PATH/webapps/
+cp $PROJ_PATH/SelenuimTest/ $TOMCAT_APP_PATH/webapps/
 
-cd $TOMCAT_APP_PATH/webapps/
-mv selenuim_demo.war ROOT.war
-
-# 启动Tomcat
-cd $TOMCAT_APP_PATH/
-sh bin/startup.sh
+#cd $TOMCAT_APP_PATH/webapps/
+#mv selenuim_demo.war ROOT.war
+#
+## 启动Tomcat
+#cd $TOMCAT_APP_PATH/
+#sh bin/startup.sh
