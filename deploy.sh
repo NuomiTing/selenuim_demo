@@ -23,7 +23,7 @@
 #    kill -9 $pid
 #  fi
 #}
-cd $PROJ_PATH/SelenuimTest
+cd $PROJ_PATH/
 
 python3 test.py
 
