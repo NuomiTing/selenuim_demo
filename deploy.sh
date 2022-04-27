@@ -24,7 +24,7 @@
 #  fi
 #}
 cd $PROJ_PATH
-
+pip install -r requirements.txt
 python3 test.py
 
 ## 停tomcat
