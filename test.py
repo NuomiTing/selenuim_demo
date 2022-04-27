@@ -1,6 +1,12 @@
 '''
 Selenium基础，相当于hello world，真正用自动化测试应该是要用到框架
 '''
+import sys
+import os
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(rootPath)
+
 from selenium import webdriver
 
 # 创建一个 Chrome WebDriver 实例
