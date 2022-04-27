@@ -24,8 +24,15 @@
 #  fi
 #}
 cd $PROJ_PATH
+echo "hello"
+
+python3 -m pip install --upgrade pip
+echo "hello1"
 pip install -r requirements.txt
+
+echo "hello2"
 python3 test.py
+echo "hello3"
 
 ## 停tomcat
 #killTomcat
